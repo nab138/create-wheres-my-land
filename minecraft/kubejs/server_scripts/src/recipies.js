@@ -23,7 +23,6 @@ ServerEvents.recipes((event) => {
     "minecraft:gold_ingot",
     "vs_eureka:floater"
   );
-
   event.replaceInput(
     { id: "vs_eureka:floater" },
     "minecraft:string",
