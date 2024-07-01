@@ -3,7 +3,7 @@ const oresToRemove = ["minecraft:copper_ore", "create:zinc_ore"];
 let allOresToRemove = [];
 
 oresToRemove.forEach((or) => {
-  allOresToRemove.concat(ore(or));
+  allOresToRemove = allOresToRemove.concat(ore(or));
 });
 
 WorldgenEvents.remove((event) => {
@@ -20,7 +20,7 @@ WorldgenEvents.remove((event) => {
 
   event.removeOres((props) => {
     props.worldgenLayer = "underground_ores";
-    props.biomes = { not: "#minecraft:is_desert" };
+    props.biomes = { not: "minecraft:desert" };
     props.blocks = ore("thermal:lead_ore");
   });
 });
