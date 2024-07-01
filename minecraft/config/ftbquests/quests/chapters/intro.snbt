@@ -1,0 +1,304 @@
+{
+	autofocus_id: "4CE91E622FB9CCC3"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "intro"
+	group: ""
+	id: "2FD4720CCBA1F1AA"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Oh no! This island is tiny!"
+				""
+				"You'll notice you can't craft a boat, so what can you do?"
+				""
+				"&oThis pack contains mods that are in beta. Proceed with caution! FTB Backups has been installed, don't be afraid to use it."
+			]
+			id: "4CE91E622FB9CCC3"
+			tasks: [{
+				id: "524C9C467FBAC49F"
+				title: "Where's my land?"
+				type: "checkmark"
+			}]
+			x: -11.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["640EDDB562AC712D"]
+			description: [
+				"Your ship will be your best friend! Your starting island won't have much to offer, so it's best to harvest it's resources and then go on the move."
+				""
+				"You should place a few floaters as on a platform of whatever block you want in the water, then place your helm on top and click assemble!"
+				""
+				"&l&oDO NOT DISSASEMBLE YOUR SHIP! It can break create contraptions and cause other issues!"
+			]
+			icon: "vs_eureka:oak_ship_helm"
+			id: "62AD86B03FB97F37"
+			ignore_reward_blocking: true
+			rewards: [{
+				count: 16
+				id: "197E5FD0460C8F6B"
+				item: "minecraft:apple"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 15L
+					id: "75351EA750F6FF81"
+					item: "vs_eureka:floater"
+					type: "item"
+				}
+				{
+					id: "73D575B1BD4E649B"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "vs_eureka:oak_ship_helm"
+								}
+								{
+									Count: 1b
+									id: "vs_eureka:spruce_ship_helm"
+								}
+								{
+									Count: 1b
+									id: "vs_eureka:birch_ship_helm"
+								}
+								{
+									Count: 1b
+									id: "vs_eureka:acacia_ship_helm"
+								}
+								{
+									Count: 1b
+									id: "vs_eureka:jungle_ship_helm"
+								}
+								{
+									Count: 1b
+									id: "vs_eureka:dark_oak_ship_helm"
+								}
+							]
+						}
+					}
+					title: "Ship Helm"
+					type: "item"
+				}
+			]
+			title: "Create a ship!"
+			x: -9.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["4CE91E622FB9CCC3"]
+			description: [
+				"Kelp will be your best friend through the early days of your journey. It's used to make floaters and some create components, which will be essential later on, and it can provide a great food source. It'll also make for a wonderful fuel source, should you choose to use it."
+				""
+				"Might want to make a few smokers for all of that kelp..."
+			]
+			id: "640EDDB562AC712D"
+			tasks: [{
+				count: 4L
+				id: "45F482AC36C38BF0"
+				item: "minecraft:dried_kelp_block"
+				type: "item"
+			}]
+			title: "Gross, what touched my foot?"
+			x: -10.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["62AD86B03FB97F37"]
+			description: [
+				"You won't be staying on your island for very long, so don't build much there! You'll need to venture to other biomes for ores, resources, and more."
+				""
+				"Your boat will be your new home. You can make tree farms, regular farms, create contraptions, and everything you can dream of and take it with you!"
+				""
+				"Try not to get it too out of balance though, it can make for an infurating game experience..."
+			]
+			icon: "minecraft:oak_chest_boat"
+			id: "01D00FFCC5482F4B"
+			tasks: [{
+				id: "18AF23E5848E6314"
+				title: "Your new home"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["01D00FFCC5482F4B"]
+			description: [
+				"Your ship is very slow, why not speed it up?"
+				""
+				"You'll need to find iron, but careful not to forget where you place your ship!"
+				""
+				"To use the engine, just place it on your ship, and fuel it. It takes a minute to get up to temp, so be patient! You might want several engines, because the more you have, the faster you go!"
+			]
+			id: "41BCE18043D89E25"
+			tasks: [{
+				id: "11063EEA747367FF"
+				item: "vs_eureka:engine"
+				type: "item"
+			}]
+			title: "Need for speed!"
+			x: -7.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["01D00FFCC5482F4B"]
+			description: ["Create works on boats too, so it's time to gather some resources! You'll likely want to gather more than this, it'll be annoying to keep going cave diving for andesite and iron."]
+			icon: "create:cogwheel"
+			id: "6F78FB4D6951297E"
+			rewards: [{
+				count: 8
+				id: "3DCE4BA230F5EB30"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 16L
+					id: "56EE13CA8B333598"
+					item: { Count: 16, id: "create:andesite_alloy" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "56FA240E1B179039"
+					item: { Count: 8, id: "create:shaft" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2BDB1995E64482C2"
+					item: { Count: 4, id: "create:cogwheel" }
+					type: "item"
+				}
+				{
+					id: "79A731886E507E79"
+					item: "create:hand_crank"
+					type: "item"
+				}
+			]
+			title: "Create stuffs"
+			x: -6.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["6F78FB4D6951297E"]
+			description: ["You'll need iron plates and kelp paste to do much with create. That requires some smashing and mixing!"]
+			icon: "create:mechanical_press"
+			id: "0EA4A205560351E9"
+			tasks: [
+				{
+					id: "302801069BE651B1"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "13F3A9BD5747A654"
+					item: "create:mechanical_mixer"
+					type: "item"
+				}
+				{
+					id: "0E7DD88F3C8F960B"
+					item: "create:depot"
+					type: "item"
+				}
+				{
+					id: "24F89E73832EDC65"
+					item: "create:basin"
+					type: "item"
+				}
+			]
+			title: "Bang bang"
+			x: -5.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["0EA4A205560351E9"]
+			description: ["Contraptions work on your ship too! Not everything works perfectly, deployers have a hard time placing blocks, so if you can't get a contraption to work, maybe build it on land and make a waypoint?"]
+			id: "59D9E9BD7858A466"
+			tasks: [{
+				id: "101F6D3C631C1B89"
+				item: {
+					Count: 1
+					id: "create:super_glue"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "It even works underwater!"
+			x: -4.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["3049DC557EF31FBC"]
+			description: ["Cobblestone is where many important resources are derived from, so setting up a generator soon is important."]
+			icon: "minecraft:cobblestone"
+			id: "7E0618BEC82F04A3"
+			tasks: [
+				{
+					count: 64L
+					id: "41E700BAEF51820A"
+					item: { Count: 64, id: "minecraft:cobblestone" }
+					type: "item"
+				}
+				{
+					id: "052283295D2693E4"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Cobble Cobble"
+			x: 0.5d
+			y: -6.5d
+		}
+		{
+			description: ["Lead is an important resource, and you'll need it for drills to automate cobble."]
+			id: "3049DC557EF31FBC"
+			tasks: [{
+				count: 18L
+				id: "557ED0551AF5AE55"
+				item: "thermal:lead_ingot"
+				type: "item"
+			}]
+			title: "Lead me to the lead"
+			x: -1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["59D9E9BD7858A466"]
+			description: [
+				"You can make a little kelp farm on your boat with a windmill or mechanical bearing, some mechanical harvesters, and patience!"
+				""
+				"You'll need quite a bit of iron, though."
+			]
+			icon: "minecraft:kelp"
+			id: "34C22BE1149E12D9"
+			tasks: [
+				{
+					count: 64L
+					id: "620B7213AB4F403C"
+					item: { Count: 64, id: "minecraft:kelp" }
+					type: "item"
+				}
+				{
+					id: "242749AA313906D4"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "No more kelp harvesting!"
+			x: -3.0d
+			y: -8.5d
+		}
+	]
+	title: "Intro"
+}
