@@ -14,14 +14,20 @@ WorldgenEvents.remove((event) => {
 
   event.removeOres((props) => {
     props.worldgenLayer = "underground_ores";
-    props.biomes = { not: "#minecraft:is_savanna" };
+    props.biomes = { not: "minecraft:lush_caves" };
     props.blocks = ore("minecraft:gold_ore");
   });
 
   event.removeOres((props) => {
     props.worldgenLayer = "underground_ores";
-    props.biomes = { not: "minecraft:desert" };
+    props.biomes = { not: "minecraft:dripstone_caves" };
     props.blocks = ore("thermal:lead_ore");
+  });
+
+  event.removeOres((props) => {
+    props.worldgenLayer = "underground_ores";
+    props.biomes = { not: "minecraft:frozen_ocean" };
+    props.blocks = ore("thermal:tin_ore");
   });
 });
 

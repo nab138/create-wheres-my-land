@@ -43,7 +43,7 @@ ServerEvents.recipes((event) => {
     "minecraft:iron_ingot"
   );
 
-  event.recipes.createMixing("4x kubejs:kelp_paste", [
+  event.recipes.createMixing("2x kubejs:kelp_paste", [
     "minecraft:dried_kelp",
     "minecraft:dried_kelp",
     "minecraft:kelp",
