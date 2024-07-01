@@ -102,7 +102,3 @@ kubejs/config/common.properties
 kubejs/config/client.properties
 kubejs/client_scripts/src/example.js
 kubejs/client_scripts/jsconfig.json
-mods/clockwork-1.20.1-0.1.16-forge-b3b22e39fe.jar
-mods/Controlling-forge-1.20.1-12.0.2.jar
-mods/probejs-7.0.0-forge.jar
-mods/Searchables-forge-1.20.1-1.0.3.jar
