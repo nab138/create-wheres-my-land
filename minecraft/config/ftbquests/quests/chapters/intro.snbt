@@ -1,9 +1,9 @@
 {
-	autofocus_id: "4CE91E622FB9CCC3"
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "intro"
-	group: ""
+	group: "7CD46D3E8792E83F"
+	icon: "create:andesite_alloy"
 	id: "2FD4720CCBA1F1AA"
 	order_index: 0
 	quest_links: [ ]
@@ -17,6 +17,7 @@
 				"&oThis pack contains mods that are in beta. Proceed with caution! FTB Backups has been installed, don't be afraid to use it."
 			]
 			id: "4CE91E622FB9CCC3"
+			size: 1.25d
 			tasks: [{
 				id: "524C9C467FBAC49F"
 				title: "Where's my land?"
@@ -139,14 +140,15 @@
 				"To use the engine, just place it on your ship, and fuel it. It takes a minute to get up to temp, so be patient! You might want several engines, because the more you have, the faster you go!"
 			]
 			id: "41BCE18043D89E25"
+			optional: true
 			tasks: [{
 				id: "11063EEA747367FF"
 				item: "vs_eureka:engine"
 				type: "item"
 			}]
 			title: "Need for speed!"
-			x: -7.0d
-			y: -9.0d
+			x: -8.0d
+			y: -8.5d
 		}
 		{
 			dependencies: ["01D00FFCC5482F4B"]
@@ -178,11 +180,6 @@
 					item: { Count: 4, id: "create:cogwheel" }
 					type: "item"
 				}
-				{
-					id: "79A731886E507E79"
-					item: "create:hand_crank"
-					type: "item"
-				}
 			]
 			title: "Create stuffs"
 			x: -6.5d
@@ -193,6 +190,11 @@
 			description: ["You'll need iron plates and kelp paste to do much with create. That requires some smashing and mixing!"]
 			icon: "create:mechanical_press"
 			id: "0EA4A205560351E9"
+			rewards: [{
+				id: "3412D280A709609B"
+				item: "create:hand_crank"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "302801069BE651B1"
@@ -257,11 +259,16 @@
 				}
 			]
 			title: "Cobble Cobble"
-			x: 0.5d
+			x: -3.0d
 			y: -6.5d
 		}
 		{
-			description: ["Lead is an important resource, and you'll need it for drills to automate cobble."]
+			dependencies: ["0EA4A205560351E9"]
+			description: [
+				"Lead is an important resource, and you'll need it for drills to automate cobble. "
+				""
+				"However, you'll notice you might not be able to find it underground. That's because lead only spawns in dripstone caves - which can usually be found under landmasses (if you can find any!)"
+			]
 			id: "3049DC557EF31FBC"
 			tasks: [{
 				count: 18L
@@ -270,7 +277,7 @@
 				type: "item"
 			}]
 			title: "Lead me to the lead"
-			x: -1.0d
+			x: -4.5d
 			y: -6.5d
 		}
 		{
@@ -297,7 +304,342 @@
 			]
 			title: "No more kelp harvesting!"
 			x: -3.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["7E0618BEC82F04A3"]
+			description: ["No crushing wheels yet, but you can crush some cobble into gravel. Don't crush it all though!"]
+			icon: "minecraft:gravel"
+			id: "4F426DEADBE2FBC7"
+			tasks: [
+				{
+					count: 32L
+					id: "4C8778F0BF91A393"
+					item: { Count: 32, id: "minecraft:gravel" }
+					type: "item"
+				}
+				{
+					id: "6282B189D0C890E0"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Crush it!"
+			x: -2.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["34C22BE1149E12D9"]
+			description: ["Kelp paste is used for several things, including andesite alloy- you better automate it!"]
+			icon: "kubejs:kelp_paste"
+			id: "09C6D9CDFD767BC4"
+			tasks: [
+				{
+					count: 32L
+					id: "268B54FC21FEC8AA"
+					item: "kubejs:kelp_paste"
+					type: "item"
+				}
+				{
+					id: "33A71F5C154F478E"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "You look pasty"
+			x: -1.5d
+			y: -10.5d
+		}
+		{
+			dependencies: ["4F426DEADBE2FBC7"]
+			icon: "minecraft:sand"
+			id: "4D153052D7F1E433"
+			tasks: [
+				{
+					count: 32L
+					id: "2A89EA42C9C926AD"
+					item: { Count: 32, id: "minecraft:sand" }
+					type: "item"
+				}
+				{
+					id: "4C8571D5E15D2B80"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Take the beach with you!"
+			x: -1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["4F426DEADBE2FBC7"]
+			description: [
+				"With an encased fan, you can wash your gravel into iron nuggets and flint."
+				""
+				"The fan won't push you on the boat, but it can still wash!"
+				""
+				"Never mine for iron again!"
+			]
+			icon: "minecraft:iron_nugget"
+			id: "14922A052476DDCA"
+			tasks: [
+				{
+					count: 32L
+					id: "25DD5CD03DE600CD"
+					item: { Count: 32, id: "minecraft:iron_nugget" }
+					type: "item"
+				}
+				{
+					id: "48C551388CABF33A"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Scrub-a-dub-dub"
+			x: 1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["4D153052D7F1E433"]
+			description: [
+				"You can \"bulk haunt\" soul sand, by blowing a soul flame (fire on top of soul sand) over sand, like you were washing it."
+				""
+				"Yes, you have to go to the nether."
+			]
+			icon: "minecraft:soul_sand"
+			id: "1440E913DCACE2C1"
+			tasks: [
+				{
+					count: 32L
+					id: "1926155B8603B310"
+					item: { Count: 32, id: "minecraft:soul_sand" }
+					type: "item"
+				}
+				{
+					id: "67174F5713B56236"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "OoooOoo Spooky"
+			x: 0.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["1440E913DCACE2C1"]
+			description: ["By washing soul sand, you have a small chance for some quartz (and a little gold)."]
+			icon: "minecraft:quartz"
+			id: "5A96F9B1B17D43D3"
+			tasks: [
+				{
+					count: 16L
+					id: "1CC45BE9E7DC140B"
+					item: { Count: 16, id: "minecraft:quartz" }
+					type: "item"
+				}
+				{
+					id: "254C93E2D5244C13"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Get some quartz"
+			x: 1.0d
+			y: -5.5d
+		}
+		{
+			dependencies: [
+				"7E0618BEC82F04A3"
+				"5A96F9B1B17D43D3"
+				"02C9AB732798E526"
+			]
+			description: [
+				"Diorite is made with quartz and cobble in a mixer. Almost to andesite!"
+				""
+				"You'll need to capture a blaze from the nether, and maybe fuel it with kelp or wood?"
+			]
+			icon: "minecraft:diorite"
+			id: "11C159A766EA0A2D"
+			tasks: [
+				{
+					count: 32L
+					id: "757F6605F7312175"
+					item: { Count: 32, id: "minecraft:diorite" }
+					type: "item"
+				}
+				{
+					id: "08AD1B400C53381A"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Everyone's favorite block"
+			x: 1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["59D9E9BD7858A466"]
+			description: [
+				"Unfortunatley, deployers cannot place blocks properly on boats, so if you want a tree farm, you'll have to make it on land, and come visit it for wood."
+				""
+				"You could build half of a tree farm and plant saplings yourself, or just keep a manual farm for wood and use kelp for fuel."
+			]
+			icon: "minecraft:oak_log"
+			id: "65620D7AA4F69EB7"
+			optional: true
+			tasks: [
+				{
+					count: 32L
+					id: "2C5D80691E5C4F01"
+					item: { Count: 32, id: "minecraft:oak_log" }
+					type: "item"
+				}
+				{
+					id: "08B483DF77B41907"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Tree farm"
+			x: -3.0d
 			y: -8.5d
+		}
+		{
+			dependencies: ["65620D7AA4F69EB7"]
+			description: ["Fuel is very important to automate, and this is a great way to do it."]
+			icon: "minecraft:charcoal"
+			id: "135BF4DCD2BCB917"
+			optional: true
+			tasks: [
+				{
+					count: 32L
+					id: "0BD8D3C618FF71B7"
+					item: { Count: 32, id: "minecraft:charcoal" }
+					type: "item"
+				}
+				{
+					id: "42AFA32B661738E6"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Infinite Fuel"
+			x: -1.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["34C22BE1149E12D9"]
+			description: ["You'll be needing lots of fuel, and unless you make a tree farm, this is a great way to get it."]
+			icon: "minecraft:dried_kelp_block"
+			id: "1255AE6DA99AA838"
+			optional: true
+			tasks: [
+				{
+					count: 32L
+					id: "0CA24DFB0038C257"
+					item: { Count: 32, id: "minecraft:dried_kelp_block" }
+					type: "item"
+				}
+				{
+					id: "08D51F84BA2B1940"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Infinite Fuel"
+			x: -1.5d
+			y: -9.5d
+		}
+		{
+			dependencies: [
+				"1255AE6DA99AA838"
+				"135BF4DCD2BCB917"
+			]
+			dependency_requirement: "one_completed"
+			description: ["Blaze burners will be essential for many recipes in this pack - you may want to get several."]
+			id: "02C9AB732798E526"
+			rewards: [{
+				count: 16
+				id: "5F221E57D72288D8"
+				item: "minecraft:coal"
+				type: "item"
+			}]
+			tasks: [{
+				id: "43E621023C1E796A"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "Fire!!"
+			x: 0.0d
+			y: -8.5d
+		}
+		{
+			dependencies: [
+				"7E0618BEC82F04A3"
+				"11C159A766EA0A2D"
+			]
+			icon: "minecraft:andesite"
+			id: "1A8FC4E09B5C37DF"
+			tasks: [
+				{
+					count: 64L
+					id: "1F4430C0031DE1CA"
+					item: { Count: 64, id: "minecraft:andesite" }
+					type: "item"
+				}
+				{
+					id: "3A5B4D27DC4B50F3"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "Unlimited Andesite!"
+			x: 1.0d
+			y: -7.5d
+		}
+		{
+			dependencies: [
+				"1A8FC4E09B5C37DF"
+				"09C6D9CDFD767BC4"
+				"14922A052476DDCA"
+			]
+			description: ["Andesite alloy automation is your first big accomplishment of the pack!"]
+			icon: "create:andesite_alloy"
+			id: "6413AFA6569273E2"
+			size: 1.5d
+			tasks: [
+				{
+					count: 64L
+					id: "3FED5C7A3C812A37"
+					item: { Count: 64, id: "create:andesite_alloy" }
+					type: "item"
+				}
+				{
+					id: "01FE11E849ABC225"
+					title: "Automated"
+					type: "checkmark"
+				}
+			]
+			title: "ANDESITE ALLOY!!!"
+			x: 3.0d
+			y: -7.5d
+		}
+		{
+			dependencies: ["6413AFA6569273E2"]
+			description: ["The natures compass is your best friend for resource gathering - for only 36 andesite alloy, you can track down any biome."]
+			id: "24BD9CCF13E22115"
+			optional: true
+			tasks: [{
+				id: "440903401596B788"
+				item: {
+					Count: 1
+					id: "naturescompass:naturescompass"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 4.5d
+			y: -7.5d
 		}
 	]
 	title: "Intro"

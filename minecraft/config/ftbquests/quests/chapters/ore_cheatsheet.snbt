@@ -1,0 +1,71 @@
+{
+	autofocus_id: "425B4429FF23606D"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ore_cheatsheet"
+	group: "3338023B3186E5A5"
+	id: "10D33DB71726FEFF"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependency_requirement: "one_completed"
+			description: [
+				"Ores don't spawn like normal in this pack. Iron, Coal, Redstone, and other basic materials spawn normally, but some ores spawn in specific biomes, and some don't spawn at all. "
+				""
+				"If an ore isn't listed here, it spawns like normal."
+			]
+			icon: {
+				Count: 1
+				id: "naturescompass:naturescompass"
+				tag: { }
+			}
+			id: "425B4429FF23606D"
+			size: 1.5d
+			tasks: [{
+				id: "0B09D8D95003BAA6"
+				title: "Ore Cheat-Sheet"
+				type: "checkmark"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["425B4429FF23606D"]
+			description: ["Tin ore can be found underneath frozen ocean biomes (as long as it isn't a dripstone or lush cave)."]
+			id: "700A1903BAE3A1D0"
+			tasks: [{
+				id: "3CB833AF258D7A28"
+				item: "thermal:tin_ore"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["425B4429FF23606D"]
+			description: ["Lead ore is found underground in dripstone caves."]
+			id: "687943C7FFEE1322"
+			tasks: [{
+				id: "1EA91367720FB1C4"
+				item: "thermal:lead_ore"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["425B4429FF23606D"]
+			description: ["Gold ore is found in lush caves. You can also raid the ocean monuments, if you're brave enough..."]
+			id: "52908BEEA69C71D2"
+			tasks: [{
+				id: "5430CA41C284A26A"
+				item: "minecraft:gold_ore"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 1.5d
+		}
+	]
+	title: "Ore Cheat-Sheet"
+}

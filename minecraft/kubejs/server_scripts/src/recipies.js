@@ -38,6 +38,12 @@ ServerEvents.recipes((event) => {
   );
 
   event.replaceInput(
+    { id: "minecraft:compass" },
+    "minecraft:iron_ingot",
+    "create:andesite_alloy_block"
+  );
+
+  event.replaceInput(
     { id: "thermal:drill_head" },
     "minecraft:copper_ingot",
     "minecraft:iron_ingot"
@@ -50,14 +56,16 @@ ServerEvents.recipes((event) => {
     "minecraft:kelp",
   ]);
 
-  event.recipes.createMixing("1x kubejs:enriched_gravel", [
-    Fluid.of("minecraft:water", 1000),
-    "minecraft:gravel",
-    "minecraft:gravel",
-    "minecraft:clay_ball",
-    "kubejs:kelp_paste",
-    "minecraft:iron_nugget",
-  ]);
+  event.recipes
+    .createMixing("kubejs:enriched_gravel", [
+      Fluid.of("minecraft:water", 1000),
+      "minecraft:gravel",
+      "minecraft:gravel",
+      "minecraft:clay_ball",
+      "kubejs:kelp_paste",
+      "minecraft:iron_nugget",
+    ])
+    .superheated();
 
   event.shaped("create:super_glue", ["AB", "CA"], {
     A: "kubejs:kelp_paste",
@@ -70,4 +78,21 @@ ServerEvents.recipes((event) => {
     B: "create:shaft",
     C: "create:andesite_casing",
   });
+
+  event.remove({ id: "create:crafting/materials/andesite_alloy" });
+
+  event.shaped("create:andesite_alloy", ["AB", "BC"], {
+    A: "minecraft:iron_nugget",
+    B: "minecraft:andesite",
+    C: "kubejs:kelp_paste",
+  });
+
+  event.remove({ id: "create:compacting/diorite_from_flint" });
+
+  event.recipes
+    .createMixing("minecraft:diorite", [
+      "minecraft:quartz",
+      "minecraft:cobblestone",
+    ])
+    .heated();
 });

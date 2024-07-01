@@ -1,3 +1,6 @@
 {
-	chapter_groups: [ ]
+	chapter_groups: [
+		{ id: "3338023B3186E5A5", title: "Info" }
+		{ id: "7CD46D3E8792E83F", title: "Progression" }
+	]
 }
