@@ -124,9 +124,10 @@
 			id: "01D00FFCC5482F4B"
 			tasks: [{
 				id: "18AF23E5848E6314"
-				title: "Your new home"
+				title: "Assemble a ship!"
 				type: "checkmark"
 			}]
+			title: "Your new home"
 			x: -8.0d
 			y: -7.5d
 		}
