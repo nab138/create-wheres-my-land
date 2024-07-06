@@ -95,4 +95,36 @@ ServerEvents.recipes((event) => {
       "minecraft:cobblestone",
     ])
     .heated();
+
+  event.recipes
+    .createCompacting("kubejs:cobble_quartz_ore", [
+      "minecraft:quartz",
+      "minecraft:quartz",
+      "minecraft:cobblestone",
+    ])
+    .heated();
+
+  event.recipes.createHaunting("minecraft:nether_quartz_ore", [
+    "kubejs:cobble_quartz_ore",
+  ]);
+
+  let multiSmeltXP = (output, input, includeBlasting, xp) => {
+    event.smelting(output, input).xp(xp);
+
+    if (includeBlasting) {
+      event.blasting(output, input).xp(xp);
+    }
+  };
+
+  multiSmeltXP("minecraft:quartz", "kubejs:cobble_quartz_ore", true, 0.2);
+
+  event.recipes.createCrushing(
+    [
+      "2x minecraft:quartz",
+      Item.of("minecraft:quartz").withChance(0.25),
+      Item.of("create:experience_nugget").withChance(0.75),
+      Item.of("minecraft:cobblestone").withChance(0.12),
+    ],
+    "kubejs:cobble_quartz_ore"
+  );
 });

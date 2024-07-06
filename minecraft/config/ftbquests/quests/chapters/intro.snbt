@@ -142,8 +142,14 @@
 			]
 			id: "41BCE18043D89E25"
 			optional: true
+			rewards: [{
+				count: 16
+				id: "2F1A675639E45809"
+				item: "minecraft:coal"
+				type: "item"
+			}]
 			tasks: [{
-				id: "11063EEA747367FF"
+				id: "6014E2795DDF2D12"
 				item: "vs_eureka:engine"
 				type: "item"
 			}]
@@ -643,5 +649,5 @@
 			y: -7.5d
 		}
 	]
-	title: "Intro"
+	title: "Chapter 1: The Andesite Age"
 }

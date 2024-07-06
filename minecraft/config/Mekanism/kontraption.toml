@@ -1,0 +1,28 @@
+
+#Kontraption Config. This config is synced between server and client.
+[kontraption]
+	#How powerful the liquid fuel thruster is. (3x3)
+	liquidFuelThrust = 90.0
+	#How much fuel does the liquid fuel thruster use
+	liquidFuelConsumption = 30.0
+	#How powerful the ion thruster is.
+	ionThrust = 4.0
+	#How much energy does the ion thruster use.
+	ionConsumption = 100.0
+	#How powerful the gyro is.
+	gyroTorqueStrength = 100.0
+	#At what speed the thruster starts slowing down
+	thrusterSpeedLimit = 20.0
+	#How much power does the toolgun consume when used
+	toolgunActionConsumption = "1000"
+	#How much power does the toolgun consume per block when assembling a ship (including air blocks!)
+	toolgunAssembleConsumption = "1000"
+	#How much power does the toolgun store
+	toolgunStorage = "20000000"
+	#How fast does the toolgun charge
+	toolgunChargeRate = "100000"
+	#How strong the dampening is
+	dampeningAmount = 1.0
+	#Turns the gravity off (only gets swithced off after placing a gyro)
+	zeroGravity = false
+
